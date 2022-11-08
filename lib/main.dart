@@ -127,12 +127,16 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: const EdgeInsets.only(left: 35),
         child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-              FloatingActionButton(
-                tooltip: 'Decrement',
-                onPressed: _decrementCounter,
-                child: const Icon(Icons.remove),
-              ),
+              Container(
+                  child: _counter != 0
+                      ? FloatingActionButton(
+                          tooltip: 'Decrement',
+                          onPressed: _decrementCounter,
+                          child: const Icon(Icons.remove),
+                        )
+                      : Container()),
               FloatingActionButton(
                 tooltip: 'Increment',
                 onPressed: _incrementCounter,
