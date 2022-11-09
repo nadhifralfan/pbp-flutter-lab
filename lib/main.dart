@@ -76,9 +76,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Text checkCounter(int counter) {
     if (counter % 2 == 0) {
-      return const Text('GENAP');
+      return const Text(
+        'GENAP',
+        style: TextStyle(color: Colors.red),
+      );
     }
-    return const Text('GANJIL');
+    return const Text(
+      'GANJIL',
+      style: TextStyle(color: Colors.blue),
+    );
   }
 
   @override
