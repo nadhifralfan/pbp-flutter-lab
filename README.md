@@ -1,3 +1,37 @@
+# Tugas 8: Flutter Form
+
+## Nama         : Nadhif Rahman Alfan
+
+## NPM          : 2106751783
+
+**1. Jelaskan perbedaan `Navigator.push` dan `Navigator.pushReplacement`.**
+
+`Navigator.push` akan mengarahkan aplikasi ke layar yang diinginkan dengan menambahkan rute ke stack. Sedangkan `Navigator.pushReplacement` akan melakukan hal yang sama, namun akan menggantikan route yang berada di bagian atas stack.
+
+**2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.**
+
+- `Form()`, digunakan untuk membuat wadah untuk bidang formulir.
+- `TextFormField()`, digunakan untuk membuat bidang formulir yang berisi bidang teks.
+- `DropdownButtonFormField()`, digunakan untuk membuat form field berupa tombol dropdown.
+- `ShowDatePicker()`, digunakan untuk menampilkan dialog pemilih tanggal material.
+- `ListView()`, digunakan untuk membuat widget array linier yang dapat digulir.
+- `Drawer()`, digunakan untuk membuat sidebar.
+
+**3. Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).**
+
+- `onPressed`, event untuk setelah peng-klik-an tombol selesai
+- `onSaved`, event untuk setelah user menyimpan
+- `onChanged`, event untuk ketika perubahan terjadi
+- `onTap`, event untuk sesaat setelah user meng-klik tombol
+
+**4. Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.**
+
+Navigator atau navigasi pada aplikasi Flutter dibuat dalam struktur stack, dimana layar yang berada di bagian atas stack menjadi layar saat ini. metode `push` akan menambahkan layar baru ke bagian atas tumpukan membuat aplikasi flutter menavigasi ke layar baru, sedangkan metode `pop` akan menghapus layar dari bagian atas tumpukan membuat aplikasi flutter menavigasi kembali ke layar sebelumnya.
+
+**5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.**
+
+Pertama-tama saya membuat widget Drawer pada file terpisah. Hal tersebut dilakukan untuk menyediakan navigasi aplikasi Flutter. Setelah itu, saya membuat tampilan tambah budget. Pada layar tersebut, saya membuat form untuk menambahkan budget dan saya juga menambahkan elemen date pada form untuk bonus. Kemudian, untuk menyimpan yang dimasukkan dari form budget dan membuatnya dapat diakses di layar mana pun, saya membuat status menggunakan Provider. Sehingga setiap kali data diinput oleh pengguna, keadaan lokal akan diperbarui dan setiap kali pengguna menyimpan data, data akan disimpan ke global sate. Terakhir, saya membuat tampilan data budget. Tampilan ini berisi daftar data budget yang diambil dari data yang disimpan dalam global state.
+
 # Tugas 7: Elemen Dasar Flutter
 
 ## Nama         : Nadhif Rahman Alfan
