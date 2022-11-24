@@ -3,6 +3,7 @@ import 'package:counter_7/main.dart';
 import 'package:counter_7/screens/form_budget.dart';
 import 'package:counter_7/screens/data_budget.dart';
 import 'package:counter_7/screens/counter_7.dart';
+import 'package:counter_7/screens/my_watchlist.dart';
 import 'package:provider/provider.dart';
 
 class DrawerComponents extends StatelessWidget {
@@ -65,6 +66,25 @@ class DrawerComponents extends StatelessWidget {
                   .setCurrentScreen(2);
               Navigator.pushReplacement(context,
                   MaterialPageRoute(builder: (context) => const BudgetData()));
+            }
+          },
+        ),
+        ListTile(
+          title: Text(
+            "My Watchlist",
+            style: currentScreen == 2
+                ? const TextStyle(fontWeight: FontWeight.bold)
+                : const TextStyle(fontWeight: FontWeight.normal),
+          ),
+          onTap: () {
+            Navigator.of(context).pop();
+            if (currentPage != "My Watchlist") {
+              Provider.of<ScreenState>(context, listen: false)
+                  .setCurrentScreen(3);
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const MyWatchListScreen()));
             }
           },
         )
