@@ -1,3 +1,28 @@
+# Tugas 9: Integrasi Web Service pada Flutter
+
+## Nama         : Nadhif Rahman Alfan
+
+## NPM          : 2106751783
+
+**1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?**
+
+Ya, kita dapat mengambil data JSON tanpa membuat model di flutter. Hal tersebut dapat dilakukan dengan memasukkan data-data JSON kedalam map. Hal itu juga tidak lebih baik karena akan lebih sulit pengambilan dan meng-assign data pada map, hal tersebut akan sama jika kita membuat program OOP tanpa menggunakan class. Sehingga lebih baik membuat model terlebih dahulu agar kita dapat mengetahui persis jenis data apa yang ingin kita ambil.
+
+**2.Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.**
+
+ListView.builder, Membuat array widget ListTile.
+ListTile, Membuat baris yang berisi judul film.
+Align, Untuk mengatur posisi child
+FutureBuilder, membantu program menjalankan fungsi asinkron dan akan memperbarui UI berdasarkan snapshot terbaru
+
+**3.Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.**
+
+Pertama, Flutter akan mengirimkan permintaan ke server dengan endpoint tertentu di widget FutureBuilder. Kemudian server akan memproses request tersebut berdasarkan endpoint yang sudah ditemukan. Setelah itu, Flutter akan mengirimkan data yang diminta sebagai respons. Kemudian, saat Flutter menerima respons, Flutter harus mengubah data dengan model yang sesuai. Pada akhirnya, FutureBuilder akan memperbarui snapshot data berdasarkan respons server terbaru.
+
+**4.Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.**
+
+Pertama-tama, saya membuat model class MyWatchList agar lebih mudah mengetahui jenis data yang disimpan saat mengambil data watchlist dari endpoint. Setelah itu, menmbuat tampilan MyWatchListScreen untuk menampilkan list yang sudah diambil. Pada screen tersebut, saya juga membuat function fetch untuk mengambil data dari url endpoint dan memasukkannya ke dalam suatu list. Setelah itu pada buildernya saya memanggil function tersebut untuk menampilkan data. Berikutnya saya membuat tampilan MyWatchListDetail untuk menampilkan data yang lebih detail suatu model.
+
 # Tugas 8: Flutter Form
 
 ## Nama         : Nadhif Rahman Alfan
